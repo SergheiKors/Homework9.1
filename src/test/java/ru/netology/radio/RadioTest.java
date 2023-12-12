@@ -6,6 +6,18 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
+    public void shouldSetTestCurrentChannel() {
+        Radio radio = new Radio(10);
+
+        radio.setCurrentChannel(9);
+
+        int expected = 9;
+        int actual = radio.getCurrentChannel();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetCurrentChannelUntilMin() {
         Radio radio = new Radio();
 
